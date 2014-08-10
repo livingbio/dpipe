@@ -9,6 +9,8 @@ re_f = re.compile(r'^[\d]+\.[\d]{0,1}f$')
 re_b = re.compile(r'^(True|False)$')
 
 def convert(v):
+    v = v.strip()
+
     try:
         if re_i.match(v):
             return int(v[:-1])
