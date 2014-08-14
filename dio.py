@@ -2,7 +2,7 @@ import fileinput, sys, os, re
 
 def io():
     files = [k for k in sys.argv[1:] if os.path.exists(k)]
-    return fileinput.input(files)
+    return fileinput.input(files, openhook=fileinput.hook_compressed)
 
 re_i = re.compile(r'^[\d]+i$')
 re_f = re.compile(r'^[\d]+\.[\d]+f$')
