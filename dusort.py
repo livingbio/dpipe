@@ -23,7 +23,7 @@ def usort(key=None):
     r.sort()
 
     for i in r:
-        print i
+        print i.encode('utf8')
 
 if __name__ == "__main__":
     dio.now('usort')
