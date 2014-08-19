@@ -4,4 +4,4 @@ import dio
 
 if __name__ == "__main__":
     for iline in dio.io():
-        print iline.strip()
+        print iline.strip().encode('utf8')
